@@ -61,7 +61,7 @@
                               validationData: convertedTestingData,
                               callbacks:{
                                   onEpochEnd: async(epoch, logs) =>{
-                                      console.log("Epoch: " + epoch + " Loss: " + logs.loss + " Accuracy: " + logs.acc);
+                                     document.write("<br>"+"Epoch: " + epoch + " Loss: " + logs.loss + " Accuracy: " + logs.acc);
                                   }
                               }});
             await model.save('downloads://my_model');
@@ -69,5 +69,8 @@
         run();
     </script>
 <body>
+
+<h1>Breast Cancer Classification using Browser Based Model with TensorFlowJS</h1>
+
 </body>
 </html>
